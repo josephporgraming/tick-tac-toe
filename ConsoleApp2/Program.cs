@@ -13,5 +13,11 @@ namespace ConsoleApp2
             string[,] board = new string[3, 3];
 
         }
+        public int inputforbourd(string cords, string cords2)
+        {
+            int courds1 = Int32.Parse(cords);
+            int courds2 = Int32.Parse(cords2);
+            return courds1 + courds2;
+        }
     }
 }
