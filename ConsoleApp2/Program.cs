@@ -8,33 +8,74 @@ namespace ConsoleApp2
 {
     internal class Program
     {
+        string[,] board = new string[3, 3];
+        string input;
+        string input2;
+        bool isx;
+        bool isnotblock;
+        bool oisnotblock;
+        string isdone;
         static void Main(string[] args)
         {
-            string[,] board = new string[3, 3];
-            string input;
-            string input2;
-            bool isx;
-        }
-        public int inputforbourd(string cords)
-        {
-            int courds1 = Int32.Parse(cords);
-            return courds1;
-        }
-        public int inputforbourd2(string cords2)
-        {
-            int courds2 = Int32.Parse(cords2);
-            return courds2;
-        }
-        public int cheackforwin(int firstnuber, int secondnuber)
-        {
-            int[,] win = new int[firstnuber ,secondnuber];
             
-            return ;
         }
-        public int cheackforcolison(string[,] bourdforcheack)
+        public string humanevaualatieinput(string inpu,string inpu2)
         {
-
-            return;
+            int nuberofinpu = Int32.Parse(inpu);
+            int nuberofinpu2 = Int32.Parse(inpu2);
+            if (isx)
+            {
+                board[nuberofinpu, nuberofinpu2] = "1";
+            }
+            if (!(isx))
+            {
+                board[nuberofinpu, nuberofinpu2] = "2";
+            }
+            return isdone = "done";
+        } 
+        public bool xcheackifvalidhuman(string in1,string in2)
+        {
+            int nuberofinpu = Int32.Parse(in1);
+            int nuberofinpu2 = Int32.Parse(in2);
+            if (board[nuberofinpu,nuberofinpu2] == "2")
+            {
+                isnotblock = false;
+            }
+            else
+            {
+                isnotblock = true;
+            }
+            if (board[nuberofinpu, nuberofinpu2] == "1")
+            {
+                isnotblock = false;
+            }
+            else
+            {
+                isnotblock = true;
+            }
+            return isnotblock;
+        }
+        public bool ocheackifvalidhuman(string in1, string in2)
+        {
+            int nuberofinpu = Int32.Parse(in1);
+            int nuberofinpu2 = Int32.Parse(in2);
+            if (board[nuberofinpu, nuberofinpu2] == "1")
+            {
+                isnotblock = false;
+            }
+            else
+            {
+                isnotblock = true;
+            }
+            if (board[nuberofinpu, nuberofinpu2] == "2")
+            {
+                isnotblock = false;
+            }
+            else
+            {
+                isnotblock = true;
+            }
+            return oisnotblock;
         }
     }
 }
